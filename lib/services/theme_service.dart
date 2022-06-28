@@ -24,6 +24,16 @@ class ThemeService {
     );
   }
 
+  static TextStyle textStyle4() {
+    return const TextStyle(
+      fontSize: 22,
+      color: Color(0xFF1C1B1F),
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.5,
+    );
+  }
+
   /// Size: 16, color: 1C1B1F, w 500, H: 24
   static TextStyle textStyleBody({double? letterSpacing, Color? color}) {
     return TextStyle(
@@ -95,4 +105,7 @@ class ThemeService {
   static final colorMainTask = const Color(0xFF5946D2).withOpacity(0.5);
 
   static const colorTextFieldBack = Color(0xffFAF9FB);
+
+
+  static const colorDeleteContent = Color.fromRGBO(28, 27, 31, 0.38);
 }

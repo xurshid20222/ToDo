@@ -13,24 +13,42 @@ class ToDoDetailView extends StatefulWidget {
 }
 
 class _ToDoDetailViewState extends State<ToDoDetailView> {
- void _dialog() {
-   showDialog(
-     context: context,
-     builder: (BuildContext context) {
-       return AlertDialog(
-         title:  const Text("Alert!!"),
-         content: const Text("You are awesome!"),
-         actions: <Widget>[
-            TextButton(
-             child:  const Text("OK"),
-             onPressed: () {
-               Navigator.of(context).pop();
-             },
-           ),
-         ],
-       );
-     },
-   );
+  Future<void> _showSimpleDialog() async {
+    await showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            // <-- SEE HERE
+            title:  Text('Are you sure?', style: ThemeService.textStyle4(),),
+            insetPadding: EdgeInsets.zero,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30)
+            ),
+            content:    Text('List will be permanently deleted',style: ThemeService.textStyleCaption(color: Colors.grey,),),
+            actions: [
+              TextButton(
+                onPressed: () {},
+                child:  Text(
+                  'Cancel',style: ThemeService.textStyle2(),
+                ),
+              ),
+              Container(
+                height: 40,
+                width: 89,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: ThemeService.colorPink,
+                ),
+                child: TextButton(
+                  onPressed: () {},
+                  child:  Text(
+                    'Delete', style: ThemeService.textStyle3(),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },);
   }
 
   List<ToDo> items = [];
@@ -194,7 +212,7 @@ class _ToDoDetailViewState extends State<ToDoDetailView> {
                   children: [
                     SlidableAction(
                       onPressed: (context) {
-                           _dialog();
+                        _showSimpleDialog();
                       },
                       backgroundColor: ThemeService.colorPink,
                       foregroundColor: Colors.white,
