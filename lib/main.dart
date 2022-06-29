@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/screen/detail_screen.dart';
-import 'package:todo_app/screen/intro_task_list.dart';
+import 'package:todo_app/screen/setting_screen.dart';
 
 import 'screen/home_screen.dart';
 import 'screen/splash_screen.dart';
@@ -19,13 +19,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Todo App",
-      home: const IntroTaskList(),
+      home: const HomeScreen(),
       routes: {
         HomeScreen.id: (context) => const HomeScreen(),
         WelcomeScreen.id: (context) => const WelcomeScreen(),
         SplashScreen.id: (context) => const SplashScreen(),
         DetailScreen.id: (context) => const DetailScreen(),
-        IntroTaskList.id: (context) => const IntroTaskList(),
+        SettingScreen.id: (context) =>  SettingScreen(),
       },
     );
   }

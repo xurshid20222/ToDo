@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:todo_app/screen/detail_screen.dart';
+import 'package:todo_app/screen/setting_screen.dart';
 import 'package:todo_app/services/lang_service.dart';
 
 import '../models/user_model.dart';
@@ -42,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _goSettingScreen() {
-    // TODO: navigate setting page
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SettingScreen(user: _user,)));
   }
 
   void _showSearch() {

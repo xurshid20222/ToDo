@@ -40,7 +40,7 @@ class ThemeService {
       fontSize: 16,
       color: color ?? colorBlack,
       fontFamily: 'Roboto',
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w600,
       letterSpacing: letterSpacing,
     );
   }
@@ -63,6 +63,18 @@ class ThemeService {
       color: color ?? colorMain,
       fontFamily: 'Roboto',
       fontWeight: FontWeight.w500,
+      letterSpacing: letterSpacing,
+    );
+  }
+
+  /// Size: 22, color: 1C1B1F, w: 400, H: 28
+  static TextStyle textStyleHeader({double? letterSpacing, Color? color}) {
+    return TextStyle(
+      fontSize: 22,
+      color: color ?? colorBlack,
+      fontFamily: "Roboto",
+      fontWeight: FontWeight.w400,
+      // height: 28,
       letterSpacing: letterSpacing,
     );
   }
@@ -103,6 +115,10 @@ class ThemeService {
 
   /// color: 5946D2 opacity: 50%
   static final colorMainTask = const Color(0xFF5946D2).withOpacity(0.5);
+
+  static const colorButtonText = Color(0xFFA5A0AC);
+
+  static const colorBlackButtonText = Color(0xFF160067);
 
   static const colorTextFieldBack = Color(0xffFAF9FB);
 

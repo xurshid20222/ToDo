@@ -13,42 +13,60 @@ class ToDoDetailView extends StatefulWidget {
 }
 
 class _ToDoDetailViewState extends State<ToDoDetailView> {
-  Future<void> _showSimpleDialog() async {
-    await showDialog<void>(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            // <-- SEE HERE
-            title:  Text('Are you sure?', style: ThemeService.textStyle4(),),
-            insetPadding: EdgeInsets.zero,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30)
+
+  void _showDialog(int index) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
+          title: const Text(
+            "Are you sure?",
+            style: TextStyle(color: Color(0xff1C1B1F), fontSize: 22),
+          ),
+          content: const Text(
+            "List will be permanently deleted",
+            style: TextStyle(
+                color: Color(0x611c1b1f),
+                fontSize: 14,
+                fontWeight: FontWeight.w500),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text(
+                "Cancel",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xff5946D2),
+                ),
+              ),
             ),
-            content:    Text('List will be permanently deleted',style: ThemeService.textStyleCaption(color: Colors.grey,),),
-            actions: [
-              TextButton(
-                onPressed: () {},
-                child:  Text(
-                  'Cancel',style: ThemeService.textStyle2(),
+            Container(
+              margin: const EdgeInsets.only(right: 15, bottom: 5),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(const StadiumBorder()),
+                  backgroundColor:
+                  MaterialStateProperty.all(const Color(0xffF85977)),
                 ),
+                onPressed: () {
+                  setState(() {
+                    items.removeAt(index);
+                  });
+                  Navigator.pop(context);
+                },
+                child: const Text('Delete'),
               ),
-              Container(
-                height: 40,
-                width: 89,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: ThemeService.colorPink,
-                ),
-                child: TextButton(
-                  onPressed: () {},
-                  child:  Text(
-                    'Delete', style: ThemeService.textStyle3(),
-                  ),
-                ),
-              ),
-            ],
-          );
-        },);
+            )
+          ],
+        );
+      },
+    );
   }
 
   List<ToDo> items = [];
@@ -72,105 +90,105 @@ class _ToDoDetailViewState extends State<ToDoDetailView> {
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
       ToDo(
           taskName: 'To do chayxana app',
           taskContent: 'I write code notification',
           category: 'FolderName',
           isImportant: true,
           isCompleted: false,
-          craetedDate: DateTime.now().toString()),
+          createdDate: DateTime.now().toString()),
     ];
     setState(() {
       isLoading = false;
@@ -212,7 +230,7 @@ class _ToDoDetailViewState extends State<ToDoDetailView> {
                   children: [
                     SlidableAction(
                       onPressed: (context) {
-                        _showSimpleDialog();
+                        _showDialog(index);
                       },
                       backgroundColor: ThemeService.colorPink,
                       foregroundColor: Colors.white,
@@ -231,7 +249,7 @@ class _ToDoDetailViewState extends State<ToDoDetailView> {
                     style: ThemeService.textStyleBody(),
                   ),
                   subtitle: Text(
-                    todo.craetedDate,
+                    todo.createdDate,
                     style: ThemeService.textStyleCaption(
                         color: ThemeService.colorSubtitle),
                   ),

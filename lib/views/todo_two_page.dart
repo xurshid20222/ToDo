@@ -1,17 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/services/lang_service.dart';
+
 import 'package:todo_app/services/theme_service.dart';
 
 import '../models/my_todo_model.dart';
-class TodotwoPage extends StatefulWidget {
-  const TodotwoPage({Key? key}) : super(key: key);
+class CompletedDetailView extends StatefulWidget {
+  const CompletedDetailView({Key? key}) : super(key: key);
 
   @override
-  State<TodotwoPage> createState() => _TodotwoPageState();
+  State<CompletedDetailView> createState() => _CompletedDetailViewState();
 }
 
-class _TodotwoPageState extends State<TodotwoPage> {
+class _CompletedDetailViewState extends State<CompletedDetailView> {
 
   bool avtoFocus = true;
 
@@ -31,21 +31,21 @@ class _TodotwoPageState extends State<TodotwoPage> {
     });
     // TODO : u will write code read notes
     items = [
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
-      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, craetedDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
+      ToDo(taskName: 'To do chayxana app', taskContent: 'I write code notification', category: 'FolderName', isImportant: true, isCompleted: false, createdDate: DateTime.now().toString()),
     ];
     setState((){
       isLoading = false;
@@ -105,7 +105,7 @@ class _TodotwoPageState extends State<TodotwoPage> {
                       style: ThemeService.textStyleBody(),
                     ),
                     subtitle: Text(
-                      todo.craetedDate,
+                      todo.createdDate,
                       style: ThemeService.textStyleCaption(color: ThemeService.colorSubtitle),
                     ),
                     trailing: IconButton(
@@ -123,51 +123,6 @@ class _TodotwoPageState extends State<TodotwoPage> {
 
         ],
       ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          avtoFocus ?
-          Container (
-            height: 40,
-            width: double.infinity,
-            margin: const EdgeInsets.only(left: 20, right: 20,),
-            decoration: BoxDecoration(
-              color: Colors.grey.withOpacity(0.7),
-              borderRadius: BorderRadius.circular(50),
-
-            ),
-            child:  TextField(
-              autofocus: avtoFocus,
-              decoration: const InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Add a task',
-                  hintStyle: TextStyle(color: Colors.white),
-                  prefixIcon: Icon(Icons.add, color: Colors.white,)
-              ),
-            ),
-          ):
-          Container(
-            height: 70,
-            width: double.infinity,
-            margin: const EdgeInsets.only(left: 20, right: 20,),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(2),
-
-            ),
-            child:  TextField(
-              autofocus: avtoFocus,
-              decoration: const InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Add a task',
-                  hintStyle: TextStyle(color: Colors.white),
-                  prefixIcon: Icon(Icons.add, color: Colors.white,)
-              ),
-            ),
-          ),
-        ],
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
     );
   }
 }
